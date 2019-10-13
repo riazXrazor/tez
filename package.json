@@ -1,0 +1,69 @@
+{
+  "name": "tez.js",
+  "version": "0.0.1",
+  "description": "An micro framework for a TypeScript API server made with (Fastify, tsoa, swagger + UI)",
+  "repository": "https://github.com/riazXrazor/tez",
+  "author": "Riaz Laskar <riazcool77@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "tez": "node ./build/tez.js"
+  },
+  "scripts": {
+    "build": "ts-node -P tsconfig-base.json ./build/gen.ts",
+    "start": "ts-node -P tsconfig-base.json ./src/server.ts",
+    "typeorm": "ts-node -P ./src/tsconfig.json -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "db:migrate": "ts-node -P tsconfig-base.json ./build/migration.ts",
+    "db:update": "npm run typeorm migration:run",
+    "postinstall": "link-module-alias",
+    "gen:env": "ts-node -P tsconfig-base.json ./build/env.ts",
+    "gen:key": "node ./build/key-gen.js",
+    "tez": "node ./build/tez.js generator"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "fastify": "^2.7.1",
+    "fastify-blipp": "^2.1.0",
+    "fastify-helmet": "^3.0.1",
+    "fastify-jwt": "^1.0.0",
+    "fastify-plugin": "^1.6.0",
+    "fastify-register-routes": "^1.1.2",
+    "fastify-swagger": "^2.4.0",
+    "mysql2": "^1.7.0",
+    "tsoa": "^2.4.11",
+    "typeorm": "^0.2.18"
+  },
+  "_moduleAliases": {
+    "#srcDir": "./src",
+    "#controllers": "./src/controllers",
+    "#models": "./src/models",
+    "#config": "./src/config",
+    "#utils": "./src/utils"
+  },
+  "devDependencies": {
+    "@types/clui": "^0.3.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^11.13.0",
+    "@types/pretty-hrtime": "^1.0.0",
+    "@types/readline-sync": "^1.4.3",
+    "@types/uniqid": "^4.1.3",
+    "chalk": "^2.4.2",
+    "clui": "^0.3.6",
+    "enquirer": "^2.3.2",
+    "execa": "^2.0.4",
+    "handlebars": "^4.1.2",
+    "hygen": "^4.0.9",
+    "keypair": "^1.0.1",
+    "link-module-alias": "^1.2.0",
+    "pino-pretty": "^3.2.1",
+    "prepend-file": "^1.3.1",
+    "pretty-hrtime": "^1.0.3",
+    "readline-sync": "^1.4.10",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.3",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.15.0",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^3.4.2",
+    "uniqid": "^5.0.3"
+  }
+}
