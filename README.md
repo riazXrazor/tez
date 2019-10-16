@@ -1,5 +1,5 @@
 # tez.js
->An micro framework for a TypeScript API server made with (Fastify, tsoa, swagger + UI)
+>An micro framework for a TypeScript API server made with (Fastify, tsoa, swagger + UI) that auto generates documentation as you build the api
 
 # Usage
 ### To build the docs and route from the controllers
@@ -7,4 +7,4 @@
 ### To start the server run 
 >npm start
 
-### docs can be accessed from `http://localhost:3000/docs`
+### auto gernerated documentation for the api can be accessed from `http://localhost:3000/docs`
