@@ -50,7 +50,7 @@
     "clui": "^0.3.6",
     "enquirer": "^2.3.2",
     "execa": "^2.0.4",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.7",
     "hygen": "^4.0.9",
     "keypair": "^1.0.1",
     "link-module-alias": "^1.2.0",
